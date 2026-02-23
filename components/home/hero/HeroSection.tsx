@@ -3,6 +3,7 @@ import Image from "next/image";
 import AnimatedIntro from "./AnimatedIntro";
 import LinkButton from "@/components/general/LinkButton";
 import { FaArrowRight } from "react-icons/fa6";
+import Projects from "@/components/projects/Projects";
 
 function HeroSection() {
   return (
