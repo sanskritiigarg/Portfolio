@@ -4,9 +4,9 @@
   --background: #fefae0;
   --foreground: #3a2e1f;
 
-  --primary: #d4a373;
+  --primary: #d3a16e;
   --accent: #ccd5ae;
-  --surface: #faedcd;
+  --surface: #cebd90;
   --muted: #e9edc9;
   --border: #e2d3b0;
 }
@@ -16,10 +16,10 @@
   --background: #181c14;
   --foreground: #ecdfcc;
 
-  --primary: #697565;
-  --surface: #3c3d37;
+  --primary: #5e8950;
+  --surface: #858f4c;
   --accent: #6b8e65;
-  --muted: #545e52;
+  --muted: #657d61;
   --border: #4a4b45;
 
 }

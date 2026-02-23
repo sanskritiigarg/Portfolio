@@ -3,11 +3,11 @@ import { IconType } from "react-icons";
 
 interface LinkButtonProps {
   href: string;
-  text?: string;
+  text: string;
   icon?: IconType;
   iconPosition?: "right" | "left";
-  rounded: boolean;
-  download: boolean;
+  rounded?: boolean;
+  download?: boolean;
 }
 
 function LinkButton({
