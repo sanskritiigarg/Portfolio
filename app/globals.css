@@ -1,27 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fdf6f6;
-  --foreground: #10002b;
-
-  --primary: #99c1de;
-  --accent: #bcd4e6;
-  --surface: #c5dedd;
-  --muted: #dbe7e4;
-  --border: #dbe7e4;
-}
-
-/* Dark mode */
-.dark {
-  --background: #181c14;
-  --foreground: #ede7de;
+  --background: #10002b;
+  --foreground: #e7f5fe;
 
   --primary: #023e8a;
-  --surface: #0077b6;
-  --accent: #0096c7;
+  --surface: #03689e;
+  --accent: #0fa7d9;
   --muted: #00b4d8;
   --border: #90e0ef;
-
 }
 
 @theme inline {

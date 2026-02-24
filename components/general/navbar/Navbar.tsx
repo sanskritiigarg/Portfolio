@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
-import { useTheme } from "next-themes"
 import { FaDownload } from "react-icons/fa6";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
@@ -19,7 +18,6 @@ export const navLinks = [
 
 
 function Navbar() {
-  const { theme, setTheme } = useTheme();
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [mounted, setMounted] = useState(false)
   const [navBg, setNavBg] = useState(false);
@@ -54,15 +52,6 @@ function Navbar() {
         </div>
       
         <div className="flex gap-2">
-          <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="bg-surface border border-border px-3 py-1 rounded-full transition-all duration-150 hover:opacity-80 hover:scale-105">
-            {mounted ? (
-              theme === "dark" ? <MdDarkMode className="w-5 h-5"/> : <MdLightMode className="w-5 h-5"/>
-            ) : (
-              <div className="w-5 h-5"/>
-            )}
-          </button>
-
           <LinkButton href="/documents/Sanskriti_Garg.pdf" text="Resume" download icon={FaDownload} iconPosition="left" rounded/>
 
           <button className="md:hidden block z-90" onClick={() => setSidebarOpen(!isSidebarOpen)}>
