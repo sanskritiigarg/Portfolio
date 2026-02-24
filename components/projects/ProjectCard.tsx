@@ -21,11 +21,11 @@ function ProjectCard({
   live,
 }: ProjectCardProps) {
   return (
-    <div className="border p-4 rounded-lg border-border shadow-md shadow-muted">
+    <div className="border p-4 rounded-lg border-border shadow-md shadow-muted mb-4">
       <Image
         src={image}
         alt="project-image"
-        width={450}
+        width={475}
         height={400}
         className="rounded-lg"
       />

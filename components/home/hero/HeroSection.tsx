@@ -17,7 +17,7 @@ function HeroSection() {
           <Image src="/my-photo.jpeg" alt="My picture" className="rounded-full object-cover" fill/>
         </div>
 
-        <h1 className="my-6 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide text-transparent bg-clip-text bg-linear-to-r to-primary from-surface">Hi, I am Sanskriti Garg</h1>
+        <h1 className="py-2 my-4 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide text-transparent bg-clip-text bg-linear-to-r to-primary from-surface">Hi, I am Sanskriti Garg</h1>
         <AnimatedIntro/>
         <LinkButton href="#projects" icon={FaArrowRight} iconPosition="right" text="See my work"/>
       </div>
