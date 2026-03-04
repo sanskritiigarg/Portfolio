@@ -22,7 +22,7 @@ function Contact() {
   const inputStyle = "px-4 py-3 outline-none border border-primary rounded-md w-full focus:border-surface transition-colors mb-4 bg-surface/30";
 
   return (
-    <section id="contact" className="py-16 lg:py-24">
+    <section id="contact" className="py-8 lg:py-14">
       <Header title="Let's Collaborate?" />
       <div className="w-[90%] md:w-[80%] lg:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12">
         <div>
