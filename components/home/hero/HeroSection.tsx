@@ -26,7 +26,10 @@ function HeroSection() {
       </div>
       <div className="absolute z-10 flex flex-col items-center">
         {/* image */}
-        <div className="relative w-36 h-36 rounded-full border-2 border-accent">
+        <div
+          className="relative w-36 h-36 rounded-full border-2 border-accent"
+          data-aos="fade-up"
+        >
           <div className="absolute inset-0 rounded-full blur-lg animate-pulse opacity-60 bg-linear-to-r from-accent to-primary/80 w-40 h-40" />
           <Image
             src="/my-photo.jpeg"
@@ -36,7 +39,11 @@ function HeroSection() {
           />
         </div>
 
-        <h1 className="py-2 my-4 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide text-transparent bg-clip-text bg-linear-to-r to-primary from-surface">
+        <h1
+          className="py-2 my-4 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide text-transparent bg-clip-text bg-linear-to-r to-primary from-surface"
+          data-aos="fade-up"
+          data-delay-aos="200"
+        >
           Hi, I am Sanskriti Garg
         </h1>
         <AnimatedIntro />
@@ -45,6 +52,9 @@ function HeroSection() {
           icon={FaArrowRight}
           iconPosition="right"
           text="See my work"
+          animate
+          aosType="fade-up"
+          aosDelay={600}
         />
       </div>
     </section>

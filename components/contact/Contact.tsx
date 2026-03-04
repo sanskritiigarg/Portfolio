@@ -22,10 +22,10 @@ function Contact() {
   const inputStyle = "px-4 py-3 outline-none border border-primary rounded-md w-full focus:border-surface transition-colors mb-4 bg-surface/30";
 
   return (
-    <section id="contact" className="py-8 lg:py-14">
+    <section id="contact" className="py-8 lg:py-14" data-aos="fade-up">
       <Header title="Let's Collaborate?" />
       <div className="w-[90%] md:w-[80%] lg:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12">
-        <div>
+        <div data-aos="fade-right">
           <p className="mb-10 text-base lg:text-lg leading-relaxed">
             I am currently available for freelance and full-time opportunites.
             Whether you have a project in mind or just want to connect, feel
@@ -37,7 +37,7 @@ function Contact() {
               <Link
                 href={info.link}
                 key={index}
-                className="group flex items-center gap-4 w-full px-2 py-3 transition-colors rounded-lg hover:bg-surface"
+                className="group flex items-center gap-4 w-full px-2 py-3 transition-colors rounded-lg hover:bg-surface/50 duration-150"
               >
                 <div className="h-12 w-12 rounded-full bg-surface transition duration-100 group-hover:scale-105 grid place-items-center p-2">
                   {info.icon}
@@ -53,7 +53,7 @@ function Contact() {
         </div>
 
         {/* form */}
-        <div>
+        <div data-aos="fade-left">
           <form className="rounded-lg px-4 py-8 bg-primary/20">
             <input
               type="text"
@@ -72,7 +72,7 @@ function Contact() {
             />
             <textarea placeholder="Your message" required className={`${inputStyle} resize-none`} rows={4}/>
 
-            <button className="w-full bg-accent/70 font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed disabled:opacity-75">
+            <button className="w-full bg-accent/80 font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed disabled:opacity-75">
               <LuSend />
               Send Message
             </button>

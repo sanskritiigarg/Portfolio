@@ -21,7 +21,7 @@ function ProjectCard({
   live,
 }: ProjectCardProps) {
   return (
-    <div className="border p-4 rounded-lg border-border shadow-md shadow-muted mb-4 bg-primary/20">
+    <div className="border p-4 rounded-lg border-border shadow-md shadow-muted mb-4 bg-primary/20" data-aos="right">
       <Image
         src={image}
         alt="project-image"

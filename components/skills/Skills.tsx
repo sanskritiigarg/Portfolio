@@ -83,11 +83,11 @@ const skills = [
 
 function Skills() {
   return (
-    <section id="skills" className="mt-4">
+    <section id="skills" className="mt-4" data-aos="fade-up">
       <Header title="My Skills" />
       <div className="flex flex-wrap justify-center gap-6 px-12">
         {skills.map((skill, index) => (
-          <SkillCard key={index} name={skill.name} icon={skill.icon} />
+          <SkillCard key={index} name={skill.name} icon={skill.icon} delay={index*50}/>
         ))}
       </div>
     </section>

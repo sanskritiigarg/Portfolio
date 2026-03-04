@@ -28,7 +28,7 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects">
+    <section id="projects" data-aos="fade-up">
       <Header title="My Projects" />
       <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 overflow-hidden">
         {projects.map((project) => (

@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 
 function AnimatedIntro() {
   return (
-    <div className="text-lg sm:text-xl h-30 px-8 text-center font-medium text-surface">
+    <div className="text-lg sm:text-xl h-30 px-8 text-center font-medium text-surface" data-aos="fade-up" data-delay-aos="400">
       I am a
       <span className="font-bold text-2xl">
         <Typewriter
