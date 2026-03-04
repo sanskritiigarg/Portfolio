@@ -18,7 +18,7 @@ const projects = [
     title: "Stitches",
     image: "/projects/stitches.png",
     description:
-      " a scalable MERN e-commerce platform with clean REST APIs, modular backend architecture, and secure JWT-based authentication.",
+      "A scalable MERN e-commerce platform with clean REST APIs, modular backend architecture, and secure JWT-based authentication.",
     links: [
       { label: "Github", url: "https://github.com/sanskritiigarg/Stitches" },
     ],

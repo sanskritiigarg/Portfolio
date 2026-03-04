@@ -21,7 +21,7 @@ function ProjectCard({
   live,
 }: ProjectCardProps) {
   return (
-    <div className="border p-4 rounded-lg border-border shadow-md shadow-muted mb-4">
+    <div className="border p-4 rounded-lg border-border shadow-md shadow-muted mb-4 bg-primary/20">
       <Image
         src={image}
         alt="project-image"
@@ -29,7 +29,7 @@ function ProjectCard({
         height={400}
         className="rounded-lg"
       />
-      <p className="my-4 text-xl sm:text-2xl font-semibold text-surface">
+      <p className="my-4 text-xl sm:text-2xl font-semibold text-accent">
         {title}{" "}
       </p>
       <p className="font-medium text-accent mb-4 ">{description}</p>
