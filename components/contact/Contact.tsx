@@ -1,7 +1,10 @@
+"use client";
 import Header from "../general/Header";
 import { FaEnvelope, FaLinkedin } from "react-icons/fa6";
 import Link from "next/link";
 import { LuSend } from "react-icons/lu";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 const contactInfo = [
   {
@@ -19,7 +22,43 @@ const contactInfo = [
 ];
 
 function Contact() {
-  const inputStyle = "px-4 py-3 outline-none border border-primary rounded-md w-full focus:border-surface transition-colors mb-4 bg-surface/30";
+  const [loading, setLoading] = useState(false);
+  const inputStyle =
+    "px-4 py-3 outline-none border border-primary rounded-md w-full focus:border-surface transition-colors mb-4 bg-surface/30";
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    const form = event.currentTarget;
+    event.preventDefault();
+    setLoading(true);
+    const formData = new FormData(form);
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY!);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      toast.success("Form submitted", {
+        style: {
+          backgroundColor: "#023e8a",
+          color: "#e7f5fe",
+        },
+        duration: 1000,
+      });
+      form.reset();
+    } else {
+      toast.error("Error Submitting", {
+        style: {
+          backgroundColor: "#e7f5fe",
+          color: "#090115",
+        },
+        duration: 1000,
+      });
+    }
+    setLoading(false);
+  };
 
   return (
     <section id="contact" className="py-8 lg:py-14" data-aos="fade-up">
@@ -54,27 +93,54 @@ function Contact() {
 
         {/* form */}
         <div data-aos="fade-left">
-          <form className="rounded-lg px-4 py-8 bg-primary/20">
+          <form
+            className="rounded-lg px-4 py-8 bg-primary/20"
+            onSubmit={onSubmit}
+          >
             <input
               type="text"
               placeholder="Your Name"
+              required
               className={inputStyle}
+              name="name"
             />
             <input
               type="email"
               placeholder="Your Email"
+              required
               className={inputStyle}
+              name="email"
             />
             <input
               type="text"
               placeholder="Subject of the message"
               className={inputStyle}
+              name="subject"
             />
-            <textarea placeholder="Your message" required className={`${inputStyle} resize-none`} rows={4}/>
+            <textarea
+              placeholder="Your message"
+              required
+              className={`${inputStyle} resize-none`}
+              rows={4}
+              name="message"
+            />
 
-            <button className="w-full bg-accent/80 font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed disabled:opacity-75">
-              <LuSend />
-              Send Message
+            <button
+              className="w-full bg-accent/80 font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed disabled:opacity-75"
+              type="submit"
+              disabled={loading}
+            >
+              {loading ? (
+                <>
+                  <span className="w-6 h-6 border-4 border-muted border-t-white rounded-full animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                <>
+                  <LuSend />
+                  Send Message
+                </>
+              )}
             </button>
           </form>
         </div>
