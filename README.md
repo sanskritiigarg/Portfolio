@@ -1,67 +1,64 @@
-# Personal Portfolio Website
+# Portfolio — Sanskriti Garg
 
-A modern, responsive portfolio website built to showcase my projects, skills, and technical focus.
+A clean, responsive developer portfolio built with Next.js 15 and TypeScript. Showcases projects, skills, and experience with smooth animations and a minimal UI.
 
-GitHub Repo: https://github.com/sanskritiigarg/Portfolio
-
----
-
-## 🚀 Tech Stack
-
-- **Next.js 15**
-- **TypeScript**
-- **Tailwind CSS**
-<!-- - **Framer Motion** (UI animations)
-- **GSAP** (background scroll animation) -->
+**Live:** [sanskritigarg.dev](https://sanskritigarg.dev)
 
 ---
 
-## ✨ Features
+## Tech Stack
 
-- Fully responsive design
-- Smooth scroll-based animations
-- Project showcase with GitHub links
-- Resume download option
-- Clean and minimal UI
+| Layer | Tech |
+|---|---|
+| Framework | Next.js 15 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Animations | AOS |
+| Contact Form | Web3Forms |
+
+---
+
+## Features
+
+- Responsive across all screen sizes
+- Scroll-triggered animations via AOS
+- Project showcase with live + GitHub links
+- Resume download
+- Contact form with toast notifications
 - Performance optimized
 
 ---
 
-## 📌 Why This Stack?
-
-- **Next.js** for modern React architecture and production-ready setup.
-- **TypeScript** for type safety and better maintainability.
-<!-- - **Framer Motion** for clean UI transitions.
-- **GSAP** for scroll-controlled decorative animation. -->
-
-The goal was to build a polished, professional portfolio while maintaining performance and simplicity.
-
----
-
-## Installation & Setup
-
-Clone the repository:
+## Getting Started
 
 ```bash
 git clone https://github.com/sanskritiigarg/Portfolio.git
-```
-
-Navigate into the project:
-```
 cd Portfolio
-```
-
-Install dependencies:
-```
 npm install
-```
-
-Run development server:
-```
 npm run dev
 ```
 
-Open `http://localhost:3000`
+Open [http://localhost:3000](http://localhost:3000)
+
+---
+
+### Environment Variables
+
+Create a `.env.local` file in the root:
+
+```env
+NEXT_PUBLIC_WEB3FORMS_KEY=your_key_here
+```
+
+---
+
+## Project Structure
+
+```
+/app          → Pages and routing
+/components   → Reusable UI components
+/public       → Static assets (resume, images)
+```
 
 ---
 
