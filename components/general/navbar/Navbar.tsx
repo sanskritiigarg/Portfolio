@@ -22,10 +22,6 @@ function Navbar() {
   const [mounted, setMounted] = useState(false)
   const [navBg, setNavBg] = useState(false);
 
-  // useEffect(() => {
-  //   setMounted(true)
-  // }, [])
-
   useEffect(() => {
     const navHandler = () => {
       if (window.scrollY < 90) setNavBg(false);
