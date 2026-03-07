@@ -5,11 +5,9 @@ import Link from "next/link";
 
 function Logo() {
   return (
-    <div className="border border-primary bg-amber-100/80 rounded-full p-1">
       <Link href="#home">
-        <Image src="/iris.png" width={40} height={40} alt="Sanskriti"/>
+        <Image src="/iris.png" alt="Sanskriti" height={80} width={80}/>
       </Link>
-    </div>
   )
 }
 

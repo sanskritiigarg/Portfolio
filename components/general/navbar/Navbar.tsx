@@ -22,9 +22,9 @@ function Navbar() {
   const [mounted, setMounted] = useState(false)
   const [navBg, setNavBg] = useState(false);
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  // useEffect(() => {
+  //   setMounted(true)
+  // }, [])
 
   useEffect(() => {
     const navHandler = () => {
@@ -40,7 +40,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 z-50 w-full h-18 transition-all duration-300 ${navBg ? "backdrop-blur-lg bg-background/70 shadow shadow-border" : ""}`}>
+    <nav className={`fixed top-0 z-50 w-full h-18 transition-all duration-300 ${navBg ? "backdrop-blur-xl bg-background/70 shadow shadow-border" : ""}`}>
       <div className="w-[90%] h-full mx-auto flex justify-between items-center">
         <Logo/>
       
