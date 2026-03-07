@@ -9,11 +9,11 @@ interface SkillProps {
 
 function SkillCard({name, icon: Icon, delay}: SkillProps) {
   return (
-    <div className="bg-primary/70 text-center w-32 h-36 rounded-3xl flex flex-col items-center justify-center shadow-md shadow-accent transition hover:scale-110" data-aos="flip-right" data-aos-delay={delay}>
-      <div className="text-5xl p-2">
+    <div className="bg-primary/70 text-center w-20 h-20 md:h-28 md:w-28 rounded-2xl flex flex-col items-center justify-center shadow-md shadow-accent transition hover:scale-110" data-aos="flip-right" data-aos-delay={delay}>
+      <div className="text-2xl md:text-4xl">
         <Icon />
       </div>
-      <p className="text-lg py-4">{name}</p>
+      <p className="text-base md:text-lg">{name}</p>
     </div>
   )
 }

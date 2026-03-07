@@ -85,9 +85,9 @@ function Skills() {
   return (
     <section id="skills" className="mt-4" data-aos="fade-up">
       <Header title="My Skills" />
-      <div className="flex flex-wrap justify-center gap-6 px-12">
+      <div className="flex flex-wrap justify-center gap-4 px-8">
         {skills.map((skill, index) => (
-          <SkillCard key={index} name={skill.name} icon={skill.icon} delay={index*50}/>
+          <SkillCard key={index} name={skill.name} icon={skill.icon} delay={index*25}/>
         ))}
       </div>
     </section>
